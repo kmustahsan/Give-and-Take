@@ -9,6 +9,7 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('serviceRequest');
   this.route('profile');
+  this.route('editProfile');
 });
 
 export default Router;
