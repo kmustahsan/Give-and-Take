@@ -1,8 +1,4 @@
 <div class="container">
   {{partial 'navbar'}}
-  {{#each model as |user|}}
-    {{#link-to 'users' user.id}}{{user.email}}{{/link-to}}<br>
-{{/each}}
-<br>  
   {{outlet}}
 </div>

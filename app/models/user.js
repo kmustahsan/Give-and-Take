@@ -7,7 +7,7 @@ export default DS.Model.extend({
     description: DS.attr('string'),
     username: DS.attr('string'),
     password: DS.attr('string'),
-    title: DS.attr('string'),
+    service: DS.attr('string'),
 });
 
    
