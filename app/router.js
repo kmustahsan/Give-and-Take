@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('serviceRequest');
   this.route('profile');
   this.route('editProfile');
+  this.route('users', {path: '/users/:user_id'});
 });
 
 export default Router;
