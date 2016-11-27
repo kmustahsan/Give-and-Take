@@ -7,12 +7,13 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('serviceRequest');
   this.route('profile');
   this.route('editProfile');
   this.route('users', {path: '/users/:user_id'}, function () {
     this.route('edit');
   });
+  this.route('services');
+  this.route('service', {path: '/service/:service_id'});
 });
 
 export default Router;
