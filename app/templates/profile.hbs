@@ -7,13 +7,14 @@
         <center>
         <img src= "https://pbs.twimg.com/profile_images/1369149006/ronProfile_400x400.jpg" 
         width="125" height="125" class="img-circle">
-        <h2>{{user.email}}</h2>
+        <h2>{{model.firstObject.first_name}} {{model.firstObject.last_name}}</h2>
         <center>
-            <span><strong>Skills: </strong></span>
+            <span><strong>Service: {{model.firstObject.service}} </strong></span>
                 <span class="label label-warning"></span>
             </center>
              <center>
 	            <p class="text-center"><br></p>
+	            {{model.firstObject.description}}
 	            <br>
 
             </center>
