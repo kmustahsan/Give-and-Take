@@ -1,0 +1,73 @@
+<div class="container" style="padding-top: 60px;">
+  <h1 class="page-header">Edit Profile</h1>
+  <div class="row">
+    <!-- left column -->
+    <div class="col-md-3 col-sm-5 col-xs-11">
+      <div class="text-center">
+        <img src="https://pbs.twimg.com/profile_images/1369149006/ronProfile_400x400.jpg" class="avatar img-circle img-thumbnail" alt="avatar">
+        <h6>Upload a different photo...</h6>
+        <input type="file" class="text-center center-block well well-sm">
+      </div>
+    </div>
+    <!-- edit form column -->
+    <div class="col-md-8 col-sm-6 col-xs-12 personal-info">
+     
+
+      <h3>Personal info</h3>
+      <form class="form-horizontal" role="form">
+        <div class="form-group">
+          <label class="col-lg-3 control-label">First name:</label>
+          <div class="col-lg-8">
+            {{{input  class="form-control" value=firstName placeholder= model.firstObject.first_name cols="40" rows="1"}}}
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-lg-3 control-label">Last name:</label>
+          <div class="col-lg-8">
+           {{{input  class="form-control" value=lastName placeholder= model.firstObject.last_name cols="40" rows="1"}}}
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-lg-3 control-label">Email:</label>
+          <div class="col-lg-8">
+            {{{input  class="form-control" value=email placeholder= model.firstObject.email cols="40" rows="1"}}}
+          </div>
+        </div>
+     <div class="form-group">
+          <label class="col-md-3 control-label">Description:</label>
+          <div class="col-md-8">
+            {{{textarea  class="form-control" value=description placeholder= model.firstObject.description cols="40" rows="2"}}}
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-3 control-label">Username:</label>
+          <div class="col-md-8">
+           {{{input  class="form-control" value=username placeholder= model.firstObject.username cols="40" rows="1"}}}
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-3 control-label">Password:</label>
+          <div class="col-md-8">
+            {{{input  class="form-control" label="Password" type="password" value=password placeholder= model.firstObject.password cols="40" rows="1" }}}
+          </div>
+        </div>
+         <div class="form-group">
+          <label class="col-lg-3 control-label">Service</label>
+          <div class="col-lg-8">
+            {{{input  class="form-control" value=service placeholder= model.firstObject.service cols="40" rows="1"}}}
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-3 control-label"></label>
+          <div class="col-md-8">
+            {{#link-to "profile"}} <input class="btn btn-primary" value="Save Changes" type="button" {{action "update" firstName lastName email description
+            username password service}}>  {{/link-to}}
+            <span></span>
+            {{#link-to "profile"}} <input class="btn btn-default" value="Cancel" type="reset"> {{/link-to}}
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
