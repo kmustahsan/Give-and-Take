@@ -1,5 +1,5 @@
 export default function(server ) {
-
-    server.createList('users',1);
+    server.createList('user', 5);
+    server.createList('service', 5);
     server.loadFixtures();
 }
