@@ -11,62 +11,59 @@
     </div>
     <!-- edit form column -->
     <div class="col-md-8 col-sm-6 col-xs-12 personal-info">
+     
+
       <h3>Personal info</h3>
       <form class="form-horizontal" role="form">
         <div class="form-group">
           <label class="col-lg-3 control-label">First name:</label>
           <div class="col-lg-8">
-            <input class="form-control" value="Ron" type="text">
+            {{{input  class="form-control" value=firstName placeholder= model.firstObject.first_name cols="40" rows="1"}}}
           </div>
         </div>
         <div class="form-group">
           <label class="col-lg-3 control-label">Last name:</label>
           <div class="col-lg-8">
-            <input class="form-control" value="Swanson" type="text">
+           {{{input  class="form-control" value=lastName placeholder= model.firstObject.last_name cols="40" rows="1"}}}
           </div>
         </div>
         <div class="form-group">
           <label class="col-lg-3 control-label">Email:</label>
           <div class="col-lg-8">
-            <input class="form-control" value="myMustache@is.awesome" type="text">
+            {{{input  class="form-control" value=email placeholder= model.firstObject.email cols="40" rows="1"}}}
           </div>
         </div>
 		 <div class="form-group">
           <label class="col-md-3 control-label">Description:</label>
           <div class="col-md-8">
-            <textarea class = "form-control" rows = "2" >I have a lot of experience in Web Dev</textarea>
+            {{{textarea  class="form-control" value=description placeholder= model.firstObject.description cols="40" rows="2"}}}
           </div>
         </div>
         <div class="form-group">
           <label class="col-md-3 control-label">Username:</label>
           <div class="col-md-8">
-            <input class="form-control" value="ronTheMan" type="text">
+           {{{input  class="form-control" value=username placeholder= model.firstObject.username cols="40" rows="1"}}}
           </div>
         </div>
         <div class="form-group">
           <label class="col-md-3 control-label">Password:</label>
           <div class="col-md-8">
-            <input class="form-control" value="11111122333" type="password">
-          </div>
-        </div>
-        <div class="form-group">
-          <label class="col-md-3 control-label">Confirm password:</label>
-          <div class="col-md-8">
-            <input class="form-control" value="11111122333" type="password">
+            {{{input  class="form-control" label="Password" type="password" value=password placeholder= model.firstObject.password cols="40" rows="1" }}}
           </div>
         </div>
          <div class="form-group">
           <label class="col-lg-3 control-label">Service</label>
           <div class="col-lg-8">
-            <input class="form-control" value="HTML5/CSS" type="text">
+            {{{input  class="form-control" value=service placeholder= model.firstObject.service cols="40" rows="1"}}}
           </div>
         </div>
         <div class="form-group">
           <label class="col-md-3 control-label"></label>
           <div class="col-md-8">
-            <input class="btn btn-primary" value="Save Changes" type="button" {{action 'update'}}>
+            {{#link-to "profile"}} <input class="btn btn-primary" value="Save Changes" type="button" {{action "update" firstName lastName email description
+            username password service}}>  {{/link-to}}
             <span></span>
-            <input class="btn btn-default" value="Cancel" type="reset">
+            {{#link-to "profile"}} <input class="btn btn-default" value="Cancel" type="reset"> {{/link-to}}
           </div>
         </div>
       </form>
