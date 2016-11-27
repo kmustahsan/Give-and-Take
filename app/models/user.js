@@ -8,6 +8,8 @@ export default DS.Model.extend({
     username: DS.attr('string'),
     password: DS.attr('string'),
     service: DS.attr('string'),
+    avatar: DS.attr('string'),
+
 });
 
    
