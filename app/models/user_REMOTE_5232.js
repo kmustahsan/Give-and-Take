@@ -7,7 +7,6 @@ export default DS.Model.extend({
     description: DS.attr('string'),
     username: DS.attr('string'),
     password: DS.attr('string'),
-    avatar: DS.attr('string'),
     job: DS.attr('string'),
     services: DS.hasMany('service')
 });

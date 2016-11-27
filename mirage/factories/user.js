@@ -4,9 +4,9 @@ export default Factory.extend({
     first_name: faker.name.firstName,
     last_name: faker.name.lastName,
     email: faker.internet.email,
-    description:faker.hacker.phrase,
+    description:faker.name.title,
     username: faker.internet.userName,
     password: faker.internet.password,
+    avatar: faker.internet.avatar,
     job: faker.name.jobDescriptor
-
 });
