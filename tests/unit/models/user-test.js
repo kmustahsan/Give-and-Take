@@ -10,3 +10,4 @@ test('it exists', function(assert) {
   // let store = this.store();
   assert.ok(!!model);
 });
+

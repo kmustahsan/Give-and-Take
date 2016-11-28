@@ -27,8 +27,6 @@ export default function() {
     //Users requests
     this.get('/users');
     this.get('/users/:id');
-    this.post('/users');
-    this.put('/users/:id');
 
     //Services requests
     this.get('/services');
