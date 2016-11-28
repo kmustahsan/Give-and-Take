@@ -1,16 +1,1 @@
 {{outlet}}
-<div>
-    {{#bs-button type="primary"}}Create A
-        Service
-    {{/bs-button}}
-</div>
-<ul class="list-group">
-    {{#each model as |service|}}
-        <li class="list-group-item">
-            {{#link-to "service" service.id}}
-                {{service.name}}
-        {{/link-to}}
-        <p>Taker: {{service.user.first_name}}</p>
-        </li>
-    {{/each}}
-</ul>

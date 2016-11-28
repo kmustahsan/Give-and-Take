@@ -1,0 +1,19 @@
+<div>
+    {{#link-to "services.new"}}
+        {{#bs-button type="primary"}}Create A Service{{/bs-button}}
+    {{/link-to}}
+</div>
+<ul class="list-group">
+    {{#each model as |service|}}
+        <li class="list-group-item">
+            {{#link-to "service" service.id}}
+                {{service.title}}
+            {{/link-to}}
+        <p>Description: {{service.description}}</p>
+        <p>
+            <span>Taker: {{service.user.first_name}}</span>
+            <span class="pull-right">Due date: {{service.due}}</span>
+        </p>
+        </li>
+    {{/each}}
+</ul>

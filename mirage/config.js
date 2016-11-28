@@ -30,5 +30,6 @@ export default function() {
 
     //Services requests
     this.get('/services');
-    this.post('/services/:id');
+    this.get('/services/:id');
+    this.post('/services');
 }

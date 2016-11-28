@@ -1,0 +1,13 @@
+{{outlet}}
+{{#bs-form formLayout="vertical" model=model action="submit"}}
+    {{bs-form-element controlType="text" label="Title" placeholder="Title"
+    property="title" required=true}}
+    {{bs-form-element controlType="textarea" label="Description"
+    property="description" required=true}}
+    {{bs-form-element controlType="text" label="Location"
+    property="location" required=true}}
+    {{bs-form-element controlType="text" label="Due Date" property="due"
+    required=true}}
+    {{bs-button defaultText="Submit" type="primary"
+    buttonType="submit"}}
+{{/bs-form}}

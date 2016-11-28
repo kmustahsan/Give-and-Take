@@ -11,7 +11,9 @@ Router.map(function() {
   this.route('users', {path: '/users/:user_id'}, function () {
     this.route('edit');
   });
-  this.route('services');
+  this.route('services', function() {
+    this.route('new');
+  });
   this.route('service', {path: '/service/:service_id'});
 });
 

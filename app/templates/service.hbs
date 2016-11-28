@@ -1,1 +1,19 @@
-{{outlet}}
+<style>
+#service-info {
+    font-size: 2vh;
+}
+
+#service-data {
+    margin: 50px;
+}
+</style>
+
+<div class="container">
+    <h1 class="text-uppercase"><u>{{model.title}}</u></h1>
+        <div id="service-data" class="row">
+            <div id="service-info" class="col-sm-offset-2 col-sm-8 text-justify">Description: {{model.description}}</div>
+            <div id="service-info" class="col-sm-offset-2 col-sm-8 text-justify">Location: {{model.location}}</div>
+            <div id="service-info" class="col-sm-offset-2 col-sm-8 text-justify">Due date: {{model.due}}</div>
+            <div id="service-info" class="col-sm-offset-2 col-sm-8 text-justify">Taker: {{model.user.first_name}}</div>
+        </div>
+</div>
