@@ -9,13 +9,13 @@ export default Ember.Route.extend({
 	    	username, password, service) {	  		
 
 	      		this.get('store').findRecord('user', 1).then(function(user) { 
-	      			if (firstName != undefined) {
+	      			if (firstName !== undefined) {
 	      				user.set('first_name', firstName);
 	      			} 
-	      			if (lastName != undefined) {
+	      			if (lastName !== undefined) {
 	      				user.set('last_name', lastName);
 	      			} 
-	      			if (email != undefined) {
+	      			if (email !== undefined) {
 
 	      				var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     					if (re.test(email)) {
@@ -25,16 +25,16 @@ export default Ember.Route.extend({
 	      					alert("Invalid email. Email not updated");
 	      				}
 	      			} 
-	      			if (description != undefined) {
+	      			if (description !== undefined) {
 	      				 user.set('description', description);
 	      			} 
-	      			if (username != undefined) {
+	      			if (username !== undefined) {
 	      				 user.set('username', username);
 	      			} 
-	      			if (password != undefined) {
+	      			if (password !== undefined) {
 	      				user.set('password', password);
 	      			}
-	      			if (service != undefined) {
+	      			if (service !== undefined) {
 	      				 user.set('service', service);
 	      			}  
 				  	user.save();
