@@ -1,5 +1,4 @@
 import { moduleForComponent, test } from 'ember-qunit';
-import hbs from 'htmlbars-inline-precompile';
 import startMirage from '../helpers/start-mirage';
 
 moduleForComponent('user', 'Integration | Component | user', {
@@ -9,13 +8,23 @@ moduleForComponent('user', 'Integration | Component | user', {
   }
 });
 
-test('it renders', function(assert) {
+test('User DB is correctly seeded', function(assert) {
 
   const model = server.createList('user', 12);
 
   this.set('model', model);
-  this.render(hbs`{{users user=model}}`);
 
   assert.equal(model.length, 12);
+
+});
+
+test('User attributes are not null', function(assert) {
+
+  const model = server.createList('user', 12);
+
+  this.set('model', model);
+
+  assert.equal(model.length, 12);
+  assert.equal(model.firstObject.first_name, null);
 
 });
